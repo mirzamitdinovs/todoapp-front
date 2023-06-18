@@ -1,5 +1,5 @@
 import axios from 'axios';
-const url = 'http://localhost:5000/todos';
+const url = 'https://encouraging-battledress-slug.cyclic.app/todos';
 
 export const GET_TODOS = async (status) => {
 	try {
