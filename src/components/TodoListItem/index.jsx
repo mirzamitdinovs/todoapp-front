@@ -11,7 +11,7 @@ const TodoListItem = ({ todo, deleteTodo, toggleTodo, openUpdateModal }) => {
 		}
 	}, [todo]);
 	return (
-		<div className='flex  p-5 items-center mt-3'>
+		<div className='flex mb-3 bg-white bg-opacity-50 p-2 rounded-lg items-center mt-3'>
 			<input
 				checked={checked}
 				type='checkbox'
@@ -22,7 +22,11 @@ const TodoListItem = ({ todo, deleteTodo, toggleTodo, openUpdateModal }) => {
 				}}
 			/>
 			<p className='flex-1  mx-5'>
-				<span className={`${todo.completed ? 'line-through opacity-50' : ''}`}>
+				<span
+					className={`${
+						todo.completed ? 'line-through opacity-50 text-lg' : ''
+					}`}
+				>
 					{' '}
 					{todo.title}
 				</span>

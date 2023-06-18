@@ -38,10 +38,9 @@ const AddTodo = ({ addTodo, updateTodo }, ref) => {
 	}, [toggle]);
 
 	const closeModal = () => {
-		// setValues({
-		// 	title: '',
-		// 	completed: false,
-		// });
+		setOldTodo(null);
+		titleRef.current.value = '';
+		completedRef.current.value = '';
 		setToggle(false);
 	};
 
@@ -76,10 +75,7 @@ const AddTodo = ({ addTodo, updateTodo }, ref) => {
 
 	return (
 		<div>
-			<button
-				onClick={openModal}
-				className='bg-yellow-500 py-2 px-5 rounded-lg'
-			>
+			<button onClick={openModal} className='bg-pink-400 py-2 px-5 rounded-lg'>
 				Add Task
 			</button>
 			<div

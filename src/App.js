@@ -63,24 +63,26 @@ function App() {
 	};
 
 	return (
-		<div className=' h-screen container mx-auto p-10'>
-			<h1 className='text-4xl font-bold text-center mb-20 uppercase'>
-				Todo List
-			</h1>
-			<div className='flex justify-between'>
-				<AddTodo ref={ref} addTodo={addTodo} updateTodo={updateTodo} />
-				<FilterTodo filterTodos={filterTodos} />
-			</div>
+		<div className='bg-purple-500'>
+			<div className=' h-screen mx-auto p-10 max-w-xl'>
+				<h1 className='text-4xl font-bold text-center mb-20 uppercase'>
+					Todo List
+				</h1>
+				<div className='flex justify-between'>
+					<AddTodo ref={ref} addTodo={addTodo} updateTodo={updateTodo} />
+					<FilterTodo filterTodos={filterTodos} />
+				</div>
 
-			<div>
-				<TodoList
-					todos={todos}
-					deleteTodo={deleteTodo}
-					toggleTodo={toggleTodo}
-					openUpdateModal={openUpdateModal}
-				/>
+				<div>
+					<TodoList
+						todos={todos}
+						deleteTodo={deleteTodo}
+						toggleTodo={toggleTodo}
+						openUpdateModal={openUpdateModal}
+					/>
+				</div>
+				<ToastContainer />
 			</div>
-			<ToastContainer />
 		</div>
 	);
 }
