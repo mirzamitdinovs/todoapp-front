@@ -65,8 +65,8 @@ function App() {
 	return (
 		<div className='bg-purple-500'>
 			<div className=' h-screen mx-auto p-10 max-w-xl'>
-				<h1 className='text-4xl font-bold text-center mb-20 uppercase'>
-					Todo List
+				<h1 className='text-3xl font-bold text-center mb-20 uppercase'>
+					What is your plan for today?
 				</h1>
 				<div className='flex justify-between'>
 					<AddTodo ref={ref} addTodo={addTodo} updateTodo={updateTodo} />
